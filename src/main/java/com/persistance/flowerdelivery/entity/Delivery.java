@@ -1,9 +1,7 @@
 package com.persistance.flowerdelivery.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.type.YesNoConverter;
 
@@ -19,10 +17,13 @@ import java.util.List;
 @Getter
 @Setter
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Delivery {
 
     @Id
     @GeneratedValue
+    @Column(name="delivery_id")
     private Long deliveryId;
 
     @Nationalized
